@@ -11,15 +11,4 @@
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
-export default members => {
-	if (Array.isArray(members)) {
-		let result = members
-			.filter((item) => typeof item === 'string')
-			.map((item) => item.trim())
-			.map((item) => item[0].toUpperCase())
-			.sort()
-			.join('');
-		return result;
-	}
-	return false;
-}
+export default members => Array.isArray(members) ? members.filter((item) => typeof item === 'string').map((item) => item.trim()).map((item) => item[0].toUpperCase()).sort().join('') : false

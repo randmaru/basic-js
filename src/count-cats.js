@@ -12,4 +12,4 @@
  * ]) => 3`
  *
  */
-export default (matrix) => matrix.flat().filter(item => item === '^^').length
+export default (matrix) => matrix.flat().filter((item) => item === "^^").length;

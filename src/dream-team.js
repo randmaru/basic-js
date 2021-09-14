@@ -11,4 +11,12 @@
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
-export default members => Array.isArray(members) ? members.filter((item) => typeof item === 'string').map((item) => item.trim()).map((item) => item[0].toUpperCase()).sort().join('') : false
+export default (members) =>
+	Array.isArray(members)
+		? members
+				.filter((item) => typeof item === "string")
+				.map((item) => item.trim())
+				.map((item) => item[0].toUpperCase())
+				.sort()
+				.join("")
+		: false;

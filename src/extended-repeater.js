@@ -14,6 +14,20 @@
  *
  */
 export default (str, options) => {
-	const {repeatTimes, separator = '+', addition = '', additionRepeatTimes, additionSeparator = '|'} = options;
-	return new Array(repeatTimes).fill(String(str) + new Array(additionRepeatTimes).fill(String(addition)).join(additionSeparator)).join(separator);
-}
+	const {
+		repeatTimes,
+		separator = "+",
+		addition = "",
+		additionRepeatTimes,
+		additionSeparator = "|",
+	} = options;
+
+	return new Array(repeatTimes)
+		.fill(
+			String(str) +
+				new Array(additionRepeatTimes)
+					.fill(String(addition))
+					.join(additionSeparator)
+		)
+		.join(separator);
+};

@@ -15,4 +15,14 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-export default sampleActivity => 0 > Number(sampleActivity) || MODERN_ACTIVITY <= Number(sampleActivity) || !parseInt(sampleActivity) || false || typeof sampleActivity !== 'string' ? false : Math.ceil(Math.log(MODERN_ACTIVITY / Number(sampleActivity)) / (0.693 / HALF_LIFE_PERIOD))
+export default (sampleActivity) =>
+	0 > Number(sampleActivity) ||
+	MODERN_ACTIVITY <= Number(sampleActivity) ||
+	!parseInt(sampleActivity) ||
+	false ||
+	typeof sampleActivity !== "string"
+		? false
+		: Math.ceil(
+				Math.log(MODERN_ACTIVITY / Number(sampleActivity)) /
+					(0.693 / HALF_LIFE_PERIOD)
+		  );
